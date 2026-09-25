@@ -1,7 +1,12 @@
 """Эмулятор командной оболочки ОС."""
 
+import argparse
+import os
+import sys
+
 QUOTES = "'\""
-VFS_NAME = "vfs"
+COMMENT = "#"
+DEFAULT_VFS_NAME = "vfs"
 
 
 class ParseError(Exception):
@@ -28,7 +33,7 @@ class Splitter:
         self.current = None
 
     def feed(self, ch):
-        """Обрабатывает очередной символ строки."""
+        """Обрабатывает символ. Возвращает False, если начался комментарий."""
         if self.quote:
             if ch == self.quote:
                 self.quote = None
@@ -37,22 +42,28 @@ class Splitter:
         elif ch in QUOTES:
             self.quote = ch
             self.current = self.current or ""
+        elif ch == COMMENT and self.current is None:
+            return False
         elif ch.isspace():
             self.end_word()
         else:
             self.current = (self.current or "") + ch
+        return True
 
 
 def split_line(line):
-    """Делит строку на слова с учётом кавычек.
+    """Делит строку на слова с учётом кавычек и комментариев.
 
     Текст внутри одинарных или двойных кавычек считается одним
     словом, даже если в нём есть пробелы. Сами кавычки в результат
     не попадают. Пустые кавычки дают пустой аргумент.
+    Символ # в начале слова (вне кавычек) начинает комментарий,
+    всё после него до конца строки игнорируется.
     """
     splitter = Splitter()
     for ch in line:
-        splitter.feed(ch)
+        if not splitter.feed(ch):
+            break
     if splitter.quote:
         raise ParseError("незакрытая кавычка " + splitter.quote)
     splitter.end_word()
@@ -105,6 +116,28 @@ class Shell:
                 break
             self.execute(line)
 
+    def run_script(self, path):
+        """Выполняет стартовый скрипт, показывая ввод и вывод.
+
+        Пустые строки и строки-комментарии пропускаются.
+        Возвращает False, если файл скрипта не удалось прочитать.
+        """
+        try:
+            with open(path, encoding="utf-8") as file:
+                lines = file.read().splitlines()
+        except OSError as err:
+            print("ошибка чтения скрипта:", err)
+            return False
+        for line in lines:
+            text = line.strip()
+            if not text or text.startswith(COMMENT):
+                continue
+            print(self.prompt() + text)
+            self.execute(text)
+            if not self.running:
+                break
+        return True
+
     def cmd_ls(self, args):
         """Заглушка команды ls: печатает имя и аргументы."""
         print("ls", args)
@@ -120,9 +153,31 @@ class Shell:
         self.running = False
 
 
+def parse_args(argv=None):
+    """Разбирает параметры командной строки."""
+    parser = argparse.ArgumentParser(
+        description="Эмулятор командной оболочки ОС")
+    parser.add_argument("--vfs", help="путь к файлу VFS")
+    parser.add_argument("--script", help="путь к стартовому скрипту")
+    return parser.parse_args(argv)
+
+
+def get_vfs_name(path):
+    """Имя VFS для приглашения — имя файла без расширения."""
+    if not path:
+        return DEFAULT_VFS_NAME
+    return os.path.splitext(os.path.basename(path))[0]
+
+
 def main():
-    """Запускает эмулятор в интерактивном режиме."""
-    Shell(VFS_NAME).run()
+    """Запускает эмулятор с заданными параметрами."""
+    args = parse_args()
+    print("[debug] vfs =", args.vfs)
+    print("[debug] script =", args.script)
+    shell = Shell(get_vfs_name(args.vfs))
+    if args.script and not shell.run_script(args.script):
+        sys.exit(1)
+    shell.run()
 
 
 if __name__ == "__main__":
