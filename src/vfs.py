@@ -97,6 +97,53 @@ class Vfs:
                 raise VfsError("нет такого файла или каталога")
         return node
 
+    def get_parent(self, path):
+        """Возвращает каталог-родитель и имя для нового узла по пути."""
+        if path == "/":
+            raise VfsError("файл существует")
+        parent_path, name = split_path(path)
+        parent = self.get(parent_path)
+        if not parent.is_dir:
+            raise VfsError("не является каталогом")
+        return parent, name
+
+    def mkdir(self, path, parents=False):
+        """Создаёт каталог в памяти.
+
+        При parents=True создаёт и недостающие промежуточные каталоги,
+        а уже существующий каталог не считается ошибкой (как mkdir -p).
+        """
+        if parents:
+            prefix = ""
+            for part in path.split("/")[1:-1]:
+                prefix += "/" + part
+                if not self.exists(prefix):
+                    self.mkdir(prefix)
+            if path == "/" or self.exists(path) and self.get(path).is_dir:
+                return
+        parent, name = self.get_parent(path)
+        if name in parent.children:
+            raise VfsError("файл существует")
+        parent.children[name] = Directory()
+        parent.mtime = time.time()
+
+    def touch(self, path):
+        """Создаёт пустой файл или обновляет время изменения узла."""
+        if self.exists(path):
+            self.get(path).mtime = time.time()
+            return
+        parent, name = self.get_parent(path)
+        parent.children[name] = File()
+        parent.mtime = time.time()
+
+    def exists(self, path):
+        """Проверяет, есть ли узел по абсолютному пути."""
+        try:
+            self.get(path)
+        except VfsError:
+            return False
+        return True
+
     def stats(self):
         """Считает каталоги, файлы и общий размер файлов в байтах."""
         dirs, files, size = 0, 0, 0

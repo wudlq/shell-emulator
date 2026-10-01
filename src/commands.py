@@ -4,7 +4,7 @@ import math
 import platform
 import time
 
-from vfs import VfsError
+from vfs import VfsError, normalize
 
 HEAD_DEFAULT_LINES = 10
 DATE_FORMAT = "%Y-%m-%d %H:%M"
@@ -249,6 +249,46 @@ def cmd_uname(shell, args):
     print(" ".join(value for key, value in fields.items() if key in flags))
 
 
+def change_vfs(shell, name, paths, action, strict=True):
+    """Применяет action к каждому пути, печатая ошибки по отдельности.
+
+    Все изменения выполняются только в памяти, файл VFS не меняется.
+    strict=False — каталоги на пути заранее не проверяются (нужно для
+    mkdir -p, который сам создаёт недостающие каталоги).
+    """
+    for path in paths:
+        if not path:
+            print(name + ": пустое имя")
+            continue
+        try:
+            if strict:
+                action(shell.vfs.resolve(path, shell.cwd))
+            else:
+                action(normalize(path, shell.cwd))
+        except VfsError as err:
+            print(name + ": " + path + ": " + str(err))
+
+
+def cmd_mkdir(shell, args):
+    """mkdir [-p] каталог... — создать каталоги в памяти.
+
+    -p — создать промежуточные каталоги, не ругаться на существующие.
+    """
+    flags, paths = parse_flags(args, "p")
+    if not paths:
+        raise ShellError("не указан каталог")
+    parents = "p" in flags
+    change_vfs(shell, "mkdir", paths,
+               lambda path: shell.vfs.mkdir(path, parents), not parents)
+
+
+def cmd_touch(shell, args):
+    """touch файл... — создать пустые файлы или обновить их время."""
+    if not args:
+        raise ShellError("не указан файл")
+    change_vfs(shell, "touch", args, shell.vfs.touch)
+
+
 def cmd_exit(shell, args):
     """Завершает работу эмулятора."""
     if args:
@@ -273,6 +313,8 @@ COMMANDS = {
     "cat": cmd_cat,
     "head": cmd_head,
     "uname": cmd_uname,
+    "mkdir": cmd_mkdir,
+    "touch": cmd_touch,
     "exit": cmd_exit,
     "vfs-info": cmd_vfs_info,
 }

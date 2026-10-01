@@ -1,0 +1,47 @@
+# Стартовый скрипт этапа 5: команды mkdir и touch.
+# Все изменения происходят только в памяти, файл VFS не меняется.
+# Запуск: ./run.sh --vfs tests/vfs/deep.json --script tests/scripts/stage5.txt
+
+# --- mkdir ---
+mkdir projects
+mkdir projects/emulator "projects/new folder"   # несколько, с пробелом
+ls -l projects
+mkdir -p a/b/c            # промежуточные каталоги
+ls a/b
+mkdir -p a/b              # уже есть — с -p не ошибка
+mkdir projects            # ошибка: уже существует
+mkdir x/y                 # ошибка: нет родительского каталога
+mkdir readme.md           # ошибка: есть файл с таким именем
+mkdir etc/hosts/dir       # ошибка: родитель — файл
+mkdir -p etc/hosts/dir    # ошибка и с -p
+mkdir ""                  # ошибка: пустое имя
+mkdir -z d                # ошибка: неизвестный параметр
+mkdir                     # ошибка: не указан каталог
+
+# --- пути с «.», «..» и лишними «/» ---
+mkdir home/user/data/../../buddy/./docs
+touch home/user/./data/../../buddy/docs/../notes.txt
+ls -l home/buddy
+mkdir -p ./home//buddy/a/./b
+ls home/buddy/a
+mkdir home/nope/../buddy/x       # ошибка: каталога nope нет
+touch readme.md/../new.txt       # ошибка: readme.md не каталог
+
+# --- touch ---
+cd projects/emulator
+touch main.py "read me.txt"                     # несколько файлов
+ls -l
+cat main.py               # новый файл пустой
+touch ../../readme.md     # существующий файл — обновить время
+ls -l /readme.md
+touch /home               # каталог — тоже обновить время
+touch nope/file.txt       # ошибка: нет такого каталога
+touch /etc/hosts/file     # ошибка: родитель — файл
+touch                     # ошибка: не указан файл
+
+# итог: VFS изменилась только в памяти
+cd /
+ls
+vfs-info
+
+exit
