@@ -1,0 +1,111 @@
+{
+  "name": "deep",
+  "root": {
+    "type": "dir",
+    "mtime": 1790000000,
+    "children": {
+      "readme.md": {
+        "type": "file",
+        "mtime": 1790000000,
+        "data": [
+          "IyDQk9C70YPQsdC+0LrQsNGPIFZGUwrQotGA0Lgg0Lgg0LHQvtC70LXQtSDR",
+          "g9GA0L7QstC90Y8g0LLQu9C+0LbQtdC90L3QvtGB0YLQuC4K"
+        ]
+      },
+      "etc": {
+        "type": "dir",
+        "mtime": 1790000000,
+        "children": {
+          "hosts": {
+            "type": "file",
+            "mtime": 1790000000,
+            "data": "MTI3LjAuMC4xIGxvY2FsaG9zdAo="
+          },
+          "config": {
+            "type": "dir",
+            "mtime": 1790000000,
+            "children": {
+              "app.conf": {
+                "type": "file",
+                "mtime": 1790000000,
+                "data": "ZGVidWc9dHJ1ZQpwb3J0PTgwODAK"
+              }
+            }
+          }
+        }
+      },
+      "home": {
+        "type": "dir",
+        "mtime": 1790000000,
+        "children": {
+          "lina": {
+            "type": "dir",
+            "mtime": 1790000000,
+            "children": {
+              "docs": {
+                "type": "dir",
+                "mtime": 1790000000,
+                "children": {
+                  "report.txt": {
+                    "type": "file",
+                    "mtime": 1790000000,
+                    "data": [
+                      "0J7RgtGH0ZHRgiDQv9C+INGN0YLQsNC/0YMgMwpWRlMg0YDQsNCx0L7RgtCw",
+                      "0LXRgi4K"
+                    ]
+                  },
+                  "my notes": {
+                    "type": "dir",
+                    "mtime": 1790000000,
+                    "children": {
+                      "todo.txt": {
+                        "type": "file",
+                        "mtime": 1790000000,
+                        "data": "0YHQtNCw0YLRjCDRjdGC0LDQvyA0CtGB0LTQsNGC0Ywg0Y3RgtCw0L8gNQo="
+                      }
+                    }
+                  }
+                }
+              },
+              "music": {
+                "type": "dir",
+                "mtime": 1790000000,
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "var": {
+        "type": "dir",
+        "mtime": 1790000000,
+        "children": {
+          "log": {
+            "type": "dir",
+            "mtime": 1790000000,
+            "children": {
+              "system.log": {
+                "type": "file",
+                "mtime": 1790000000,
+                "data": [
+                  "MjAyNi0wOS0wMSBzeXN0ZW0gc3RhcnRlZAoyMDI2LTA5LTAyIHN5c3RlbSBz",
+                  "dGFydGVkCjIwMjYtMDktMDMgc3lzdGVtIHN0YXJ0ZWQKMjAyNi0wOS0wNCBz",
+                  "eXN0ZW0gc3RhcnRlZAoyMDI2LTA5LTA1IHN5c3RlbSBzdGFydGVkCjIwMjYt",
+                  "MDktMDYgc3lzdGVtIHN0YXJ0ZWQKMjAyNi0wOS0wNyBzeXN0ZW0gc3RhcnRl",
+                  "ZAoyMDI2LTA5LTA4IHN5c3RlbSBzdGFydGVkCjIwMjYtMDktMDkgc3lzdGVt",
+                  "IHN0YXJ0ZWQKMjAyNi0wOS0xMCBzeXN0ZW0gc3RhcnRlZAoyMDI2LTA5LTEx",
+                  "IHN5c3RlbSBzdGFydGVkCjIwMjYtMDktMTIgc3lzdGVtIHN0YXJ0ZWQKMjAy",
+                  "Ni0wOS0xMyBzeXN0ZW0gc3RhcnRlZAoyMDI2LTA5LTE0IHN5c3RlbSBzdGFy",
+                  "dGVkCjIwMjYtMDktMTUgc3lzdGVtIHN0YXJ0ZWQKMjAyNi0wOS0xNiBzeXN0",
+                  "ZW0gc3RhcnRlZAoyMDI2LTA5LTE3IHN5c3RlbSBzdGFydGVkCjIwMjYtMDkt",
+                  "MTggc3lzdGVtIHN0YXJ0ZWQKMjAyNi0wOS0xOSBzeXN0ZW0gc3RhcnRlZAoy",
+                  "MDI2LTA5LTIwIHN5c3RlbSBzdGFydGVkCg=="
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

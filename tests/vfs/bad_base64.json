@@ -1,0 +1,13 @@
+{
+  "name": "bad",
+  "root": {
+    "type": "dir",
+    "mtime": 1790000000,
+    "children": {
+      "file.txt": {
+        "type": "file",
+        "data": "это не base64!"
+      }
+    }
+  }
+}

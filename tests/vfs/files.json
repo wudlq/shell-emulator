@@ -1,0 +1,36 @@
+{
+  "name": "files",
+  "root": {
+    "type": "dir",
+    "mtime": 1790000000,
+    "children": {
+      "hello.txt": {
+        "type": "file",
+        "mtime": 1790000000,
+        "data": "0J/RgNC40LLQtdGCLCDQvNC40YAhCg=="
+      },
+      "notes.txt": {
+        "type": "file",
+        "mtime": 1790000000,
+        "data": [
+          "0YHRgtGA0L7QutCwIDEK0YHRgtGA0L7QutCwIDIK0YHRgtGA0L7QutCwIDMK",
+          "0YHRgtGA0L7QutCwIDQK0YHRgtGA0L7QutCwIDUK0YHRgtGA0L7QutCwIDYK",
+          "0YHRgtGA0L7QutCwIDcK0YHRgtGA0L7QutCwIDgK0YHRgtGA0L7QutCwIDkK",
+          "0YHRgtGA0L7QutCwIDEwCtGB0YLRgNC+0LrQsCAxMQrRgdGC0YDQvtC60LAg",
+          "MTIK0YHRgtGA0L7QutCwIDEzCtGB0YLRgNC+0LrQsCAxNArRgdGC0YDQvtC6",
+          "0LAgMTUK"
+        ]
+      },
+      "empty.txt": {
+        "type": "file",
+        "mtime": 1790000000,
+        "data": ""
+      },
+      "logo.bin": {
+        "type": "file",
+        "mtime": 1790000000,
+        "data": "iVBORwABAv8="
+      }
+    }
+  }
+}
