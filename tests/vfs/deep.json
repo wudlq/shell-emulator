@@ -71,6 +71,47 @@
                 "type": "dir",
                 "mtime": 1790000000,
                 "children": {}
+              },
+              ".bashrc": {
+                "type": "file",
+                "mtime": 1790000000,
+                "data": [
+                  "ZXhwb3J0IFBBVEg9JEhPTUUvYmluOiRQQVRICmFsaWFzIGxsPSdscyAtbGhh",
+                  "Jwo="
+                ]
+              },
+              ".cache": {
+                "type": "dir",
+                "mtime": 1790000000,
+                "children": {}
+              }
+            }
+          },
+          "user": {
+            "type": "dir",
+            "mtime": 1790000000,
+            "children": {
+              "data": {
+                "type": "dir",
+                "mtime": 1790000000,
+                "children": {
+                  "numbers.txt": {
+                    "type": "file",
+                    "mtime": 1790000000,
+                    "data": "MQoyCjMK"
+                  }
+                }
+              }
+            }
+          },
+          "buddy": {
+            "type": "dir",
+            "mtime": 1790000000,
+            "children": {
+              "info": {
+                "type": "file",
+                "mtime": 1790000000,
+                "data": "0KTQsNC50LsgaW5mbyDQsiDQutCw0YLQsNC70L7Qs9C1IGJ1ZGR5Lgo="
               }
             }
           }
@@ -99,7 +140,102 @@
                   "dGVkCjIwMjYtMDktMTUgc3lzdGVtIHN0YXJ0ZWQKMjAyNi0wOS0xNiBzeXN0",
                   "ZW0gc3RhcnRlZAoyMDI2LTA5LTE3IHN5c3RlbSBzdGFydGVkCjIwMjYtMDkt",
                   "MTggc3lzdGVtIHN0YXJ0ZWQKMjAyNi0wOS0xOSBzeXN0ZW0gc3RhcnRlZAoy",
-                  "MDI2LTA5LTIwIHN5c3RlbSBzdGFydGVkCg=="
+                  "MDI2LTA5LTIwIHN5c3RlbSBzdGFydGVkCjIwMjYtMDktMjEgMTI6MDEgZXZl",
+                  "bnQgMTogc2VydmljZSBjaGVja2VkCjIwMjYtMDktMjEgMTI6MDIgZXZlbnQg",
+                  "Mjogc2VydmljZSBjaGVja2VkCjIwMjYtMDktMjEgMTI6MDMgZXZlbnQgMzog",
+                  "c2VydmljZSBjaGVja2VkCjIwMjYtMDktMjEgMTI6MDQgZXZlbnQgNDogc2Vy",
+                  "dmljZSBjaGVja2VkCjIwMjYtMDktMjEgMTI6MDUgZXZlbnQgNTogc2Vydmlj",
+                  "ZSBjaGVja2VkCjIwMjYtMDktMjEgMTI6MDYgZXZlbnQgNjogc2VydmljZSBj",
+                  "aGVja2VkCjIwMjYtMDktMjEgMTI6MDcgZXZlbnQgNzogc2VydmljZSBjaGVj",
+                  "a2VkCjIwMjYtMDktMjEgMTI6MDggZXZlbnQgODogc2VydmljZSBjaGVja2Vk",
+                  "CjIwMjYtMDktMjEgMTI6MDkgZXZlbnQgOTogc2VydmljZSBjaGVja2VkCjIw",
+                  "MjYtMDktMjEgMTI6MTAgZXZlbnQgMTA6IHNlcnZpY2UgY2hlY2tlZAoyMDI2",
+                  "LTA5LTIxIDEyOjExIGV2ZW50IDExOiBzZXJ2aWNlIGNoZWNrZWQKMjAyNi0w",
+                  "OS0yMSAxMjoxMiBldmVudCAxMjogc2VydmljZSBjaGVja2VkCjIwMjYtMDkt",
+                  "MjEgMTI6MTMgZXZlbnQgMTM6IHNlcnZpY2UgY2hlY2tlZAoyMDI2LTA5LTIx",
+                  "IDEyOjE0IGV2ZW50IDE0OiBzZXJ2aWNlIGNoZWNrZWQKMjAyNi0wOS0yMSAx",
+                  "MjoxNSBldmVudCAxNTogc2VydmljZSBjaGVja2VkCjIwMjYtMDktMjEgMTI6",
+                  "MTYgZXZlbnQgMTY6IHNlcnZpY2UgY2hlY2tlZAoyMDI2LTA5LTIxIDEyOjE3",
+                  "IGV2ZW50IDE3OiBzZXJ2aWNlIGNoZWNrZWQKMjAyNi0wOS0yMSAxMjoxOCBl",
+                  "dmVudCAxODogc2VydmljZSBjaGVja2VkCjIwMjYtMDktMjEgMTI6MTkgZXZl",
+                  "bnQgMTk6IHNlcnZpY2UgY2hlY2tlZAoyMDI2LTA5LTIxIDEyOjIwIGV2ZW50",
+                  "IDIwOiBzZXJ2aWNlIGNoZWNrZWQKMjAyNi0wOS0yMSAxMjoyMSBldmVudCAy",
+                  "MTogc2VydmljZSBjaGVja2VkCjIwMjYtMDktMjEgMTI6MjIgZXZlbnQgMjI6",
+                  "IHNlcnZpY2UgY2hlY2tlZAoyMDI2LTA5LTIxIDEyOjIzIGV2ZW50IDIzOiBz",
+                  "ZXJ2aWNlIGNoZWNrZWQKMjAyNi0wOS0yMSAxMjoyNCBldmVudCAyNDogc2Vy",
+                  "dmljZSBjaGVja2VkCjIwMjYtMDktMjEgMTI6MjUgZXZlbnQgMjU6IHNlcnZp",
+                  "Y2UgY2hlY2tlZAoyMDI2LTA5LTIxIDEyOjI2IGV2ZW50IDI2OiBzZXJ2aWNl",
+                  "IGNoZWNrZWQKMjAyNi0wOS0yMSAxMjoyNyBldmVudCAyNzogc2VydmljZSBj",
+                  "aGVja2VkCjIwMjYtMDktMjEgMTI6MjggZXZlbnQgMjg6IHNlcnZpY2UgY2hl",
+                  "Y2tlZAoyMDI2LTA5LTIxIDEyOjI5IGV2ZW50IDI5OiBzZXJ2aWNlIGNoZWNr",
+                  "ZWQKMjAyNi0wOS0yMSAxMjozMCBldmVudCAzMDogc2VydmljZSBjaGVja2Vk",
+                  "CjIwMjYtMDktMjEgMTI6MzEgZXZlbnQgMzE6IHNlcnZpY2UgY2hlY2tlZAoy",
+                  "MDI2LTA5LTIxIDEyOjMyIGV2ZW50IDMyOiBzZXJ2aWNlIGNoZWNrZWQKMjAy",
+                  "Ni0wOS0yMSAxMjozMyBldmVudCAzMzogc2VydmljZSBjaGVja2VkCjIwMjYt",
+                  "MDktMjEgMTI6MzQgZXZlbnQgMzQ6IHNlcnZpY2UgY2hlY2tlZAoyMDI2LTA5",
+                  "LTIxIDEyOjM1IGV2ZW50IDM1OiBzZXJ2aWNlIGNoZWNrZWQKMjAyNi0wOS0y",
+                  "MSAxMjozNiBldmVudCAzNjogc2VydmljZSBjaGVja2VkCjIwMjYtMDktMjEg",
+                  "MTI6MzcgZXZlbnQgMzc6IHNlcnZpY2UgY2hlY2tlZAoyMDI2LTA5LTIxIDEy",
+                  "OjM4IGV2ZW50IDM4OiBzZXJ2aWNlIGNoZWNrZWQKMjAyNi0wOS0yMSAxMjoz",
+                  "OSBldmVudCAzOTogc2VydmljZSBjaGVja2VkCjIwMjYtMDktMjEgMTI6NDAg",
+                  "ZXZlbnQgNDA6IHNlcnZpY2UgY2hlY2tlZAoyMDI2LTA5LTIxIDEyOjQxIGV2",
+                  "ZW50IDQxOiBzZXJ2aWNlIGNoZWNrZWQKMjAyNi0wOS0yMSAxMjo0MiBldmVu",
+                  "dCA0Mjogc2VydmljZSBjaGVja2VkCjIwMjYtMDktMjEgMTI6NDMgZXZlbnQg",
+                  "NDM6IHNlcnZpY2UgY2hlY2tlZAoyMDI2LTA5LTIxIDEyOjQ0IGV2ZW50IDQ0",
+                  "OiBzZXJ2aWNlIGNoZWNrZWQKMjAyNi0wOS0yMSAxMjo0NSBldmVudCA0NTog",
+                  "c2VydmljZSBjaGVja2VkCjIwMjYtMDktMjEgMTI6NDYgZXZlbnQgNDY6IHNl",
+                  "cnZpY2UgY2hlY2tlZAoyMDI2LTA5LTIxIDEyOjQ3IGV2ZW50IDQ3OiBzZXJ2",
+                  "aWNlIGNoZWNrZWQKMjAyNi0wOS0yMSAxMjo0OCBldmVudCA0ODogc2Vydmlj",
+                  "ZSBjaGVja2VkCjIwMjYtMDktMjEgMTI6NDkgZXZlbnQgNDk6IHNlcnZpY2Ug",
+                  "Y2hlY2tlZAoyMDI2LTA5LTIxIDEyOjUwIGV2ZW50IDUwOiBzZXJ2aWNlIGNo",
+                  "ZWNrZWQKMjAyNi0wOS0yMSAxMjo1MSBldmVudCA1MTogc2VydmljZSBjaGVj",
+                  "a2VkCjIwMjYtMDktMjEgMTI6NTIgZXZlbnQgNTI6IHNlcnZpY2UgY2hlY2tl",
+                  "ZAoyMDI2LTA5LTIxIDEyOjUzIGV2ZW50IDUzOiBzZXJ2aWNlIGNoZWNrZWQK",
+                  "MjAyNi0wOS0yMSAxMjo1NCBldmVudCA1NDogc2VydmljZSBjaGVja2VkCjIw",
+                  "MjYtMDktMjEgMTI6NTUgZXZlbnQgNTU6IHNlcnZpY2UgY2hlY2tlZAoyMDI2",
+                  "LTA5LTIxIDEyOjU2IGV2ZW50IDU2OiBzZXJ2aWNlIGNoZWNrZWQKMjAyNi0w",
+                  "OS0yMSAxMjo1NyBldmVudCA1Nzogc2VydmljZSBjaGVja2VkCjIwMjYtMDkt",
+                  "MjEgMTI6NTggZXZlbnQgNTg6IHNlcnZpY2UgY2hlY2tlZAoyMDI2LTA5LTIx",
+                  "IDEyOjU5IGV2ZW50IDU5OiBzZXJ2aWNlIGNoZWNrZWQKMjAyNi0wOS0yMSAx",
+                  "MjowMCBldmVudCA2MDogc2VydmljZSBjaGVja2VkCjIwMjYtMDktMjEgMTI6",
+                  "MDEgZXZlbnQgNjE6IHNlcnZpY2UgY2hlY2tlZAoyMDI2LTA5LTIxIDEyOjAy",
+                  "IGV2ZW50IDYyOiBzZXJ2aWNlIGNoZWNrZWQKMjAyNi0wOS0yMSAxMjowMyBl",
+                  "dmVudCA2Mzogc2VydmljZSBjaGVja2VkCjIwMjYtMDktMjEgMTI6MDQgZXZl",
+                  "bnQgNjQ6IHNlcnZpY2UgY2hlY2tlZAoyMDI2LTA5LTIxIDEyOjA1IGV2ZW50",
+                  "IDY1OiBzZXJ2aWNlIGNoZWNrZWQKMjAyNi0wOS0yMSAxMjowNiBldmVudCA2",
+                  "Njogc2VydmljZSBjaGVja2VkCjIwMjYtMDktMjEgMTI6MDcgZXZlbnQgNjc6",
+                  "IHNlcnZpY2UgY2hlY2tlZAoyMDI2LTA5LTIxIDEyOjA4IGV2ZW50IDY4OiBz",
+                  "ZXJ2aWNlIGNoZWNrZWQKMjAyNi0wOS0yMSAxMjowOSBldmVudCA2OTogc2Vy",
+                  "dmljZSBjaGVja2VkCjIwMjYtMDktMjEgMTI6MTAgZXZlbnQgNzA6IHNlcnZp",
+                  "Y2UgY2hlY2tlZAoyMDI2LTA5LTIxIDEyOjExIGV2ZW50IDcxOiBzZXJ2aWNl",
+                  "IGNoZWNrZWQKMjAyNi0wOS0yMSAxMjoxMiBldmVudCA3Mjogc2VydmljZSBj",
+                  "aGVja2VkCjIwMjYtMDktMjEgMTI6MTMgZXZlbnQgNzM6IHNlcnZpY2UgY2hl",
+                  "Y2tlZAoyMDI2LTA5LTIxIDEyOjE0IGV2ZW50IDc0OiBzZXJ2aWNlIGNoZWNr",
+                  "ZWQKMjAyNi0wOS0yMSAxMjoxNSBldmVudCA3NTogc2VydmljZSBjaGVja2Vk",
+                  "CjIwMjYtMDktMjEgMTI6MTYgZXZlbnQgNzY6IHNlcnZpY2UgY2hlY2tlZAoy",
+                  "MDI2LTA5LTIxIDEyOjE3IGV2ZW50IDc3OiBzZXJ2aWNlIGNoZWNrZWQKMjAy",
+                  "Ni0wOS0yMSAxMjoxOCBldmVudCA3ODogc2VydmljZSBjaGVja2VkCjIwMjYt",
+                  "MDktMjEgMTI6MTkgZXZlbnQgNzk6IHNlcnZpY2UgY2hlY2tlZAoyMDI2LTA5",
+                  "LTIxIDEyOjIwIGV2ZW50IDgwOiBzZXJ2aWNlIGNoZWNrZWQKMjAyNi0wOS0y",
+                  "MSAxMjoyMSBldmVudCA4MTogc2VydmljZSBjaGVja2VkCjIwMjYtMDktMjEg",
+                  "MTI6MjIgZXZlbnQgODI6IHNlcnZpY2UgY2hlY2tlZAoyMDI2LTA5LTIxIDEy",
+                  "OjIzIGV2ZW50IDgzOiBzZXJ2aWNlIGNoZWNrZWQKMjAyNi0wOS0yMSAxMjoy",
+                  "NCBldmVudCA4NDogc2VydmljZSBjaGVja2VkCjIwMjYtMDktMjEgMTI6MjUg",
+                  "ZXZlbnQgODU6IHNlcnZpY2UgY2hlY2tlZAoyMDI2LTA5LTIxIDEyOjI2IGV2",
+                  "ZW50IDg2OiBzZXJ2aWNlIGNoZWNrZWQKMjAyNi0wOS0yMSAxMjoyNyBldmVu",
+                  "dCA4Nzogc2VydmljZSBjaGVja2VkCjIwMjYtMDktMjEgMTI6MjggZXZlbnQg",
+                  "ODg6IHNlcnZpY2UgY2hlY2tlZAoyMDI2LTA5LTIxIDEyOjI5IGV2ZW50IDg5",
+                  "OiBzZXJ2aWNlIGNoZWNrZWQKMjAyNi0wOS0yMSAxMjozMCBldmVudCA5MDog",
+                  "c2VydmljZSBjaGVja2VkCjIwMjYtMDktMjEgMTI6MzEgZXZlbnQgOTE6IHNl",
+                  "cnZpY2UgY2hlY2tlZAoyMDI2LTA5LTIxIDEyOjMyIGV2ZW50IDkyOiBzZXJ2",
+                  "aWNlIGNoZWNrZWQKMjAyNi0wOS0yMSAxMjozMyBldmVudCA5Mzogc2Vydmlj",
+                  "ZSBjaGVja2VkCjIwMjYtMDktMjEgMTI6MzQgZXZlbnQgOTQ6IHNlcnZpY2Ug",
+                  "Y2hlY2tlZAoyMDI2LTA5LTIxIDEyOjM1IGV2ZW50IDk1OiBzZXJ2aWNlIGNo",
+                  "ZWNrZWQKMjAyNi0wOS0yMSAxMjozNiBldmVudCA5Njogc2VydmljZSBjaGVj",
+                  "a2VkCjIwMjYtMDktMjEgMTI6MzcgZXZlbnQgOTc6IHNlcnZpY2UgY2hlY2tl",
+                  "ZAoyMDI2LTA5LTIxIDEyOjM4IGV2ZW50IDk4OiBzZXJ2aWNlIGNoZWNrZWQK",
+                  "MjAyNi0wOS0yMSAxMjozOSBldmVudCA5OTogc2VydmljZSBjaGVja2VkCjIw",
+                  "MjYtMDktMjEgMTI6NDAgZXZlbnQgMTAwOiBzZXJ2aWNlIGNoZWNrZWQK"
                 ]
               }
             }

@@ -61,6 +61,29 @@ class Vfs:
         self.name = name
         self.root = root if root is not None else Directory()
 
+    def resolve(self, path, cwd="/"):
+        """Переводит путь в абсолютный, проверяя каждый шаг, как в UNIX.
+
+        Путь может быть относительным (от cwd) и содержать «.», «..»
+        и повторные «/», например home/user/data/../../buddy/././info.
+        Перед «.» и «..» проверяется, что пройденная часть пути
+        существует и является каталогом. Последнее имя не проверяется,
+        чтобы путь подходил и для создания новых файлов и каталогов.
+        """
+        if not path.startswith("/"):
+            path = cwd.rstrip("/") + "/" + path
+        parts = []
+        for part in path.split("/"):
+            if part not in (".", ".."):
+                if part:
+                    parts.append(part)
+                continue
+            if not self.get("/" + "/".join(parts)).is_dir:
+                raise VfsError("не является каталогом")
+            if part == ".." and parts:
+                parts.pop()
+        return "/" + "/".join(parts)
+
     def get(self, path):
         """Возвращает узел по абсолютному нормализованному пути."""
         node = self.root

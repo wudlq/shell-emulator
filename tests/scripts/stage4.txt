@@ -1,0 +1,74 @@
+# Стартовый скрипт этапа 4: команды ls, cd, cat, head, uname.
+# Запуск: ./run.sh --vfs tests/vfs/deep.json --script tests/scripts/stage4.txt
+
+# --- ls ---
+ls                        # текущий каталог (корень)
+ls -l                     # подробный вывод
+ls home/lina              # относительный путь
+ls /etc /var/log          # несколько каталогов
+ls -l etc/hosts           # путь к файлу
+ls -a home/lina           # скрытые файлы, а также . и ..
+ls -l var/log             # размер в байтах
+ls -lh var/log            # размер в удобном виде
+ls -la home/lina          # подробно и со скрытыми
+ls -lha /                 # все три ключа вместе
+ls -hal home/lina         # ключи в другом порядке
+ls -l -h -a etc           # ключи по отдельности
+ls nope                   # ошибка: нет такого пути
+ls -x                     # ошибка: неизвестный параметр
+ls /etc/hosts/x           # ошибка: файл вместо каталога в пути
+
+# --- cd ---
+cd home/lina/docs
+cd "my notes"             # имя с пробелом
+ls
+cd ..
+cd ../../..               # выше корня подняться нельзя
+cd /var/log
+cd                        # без аргумента — в корень
+cd nope                   # ошибка: нет такого каталога
+cd readme.md              # ошибка: это файл
+cd /etc /var              # ошибка: слишком много аргументов
+
+# --- пути с «.», «..» и лишними «/» ---
+cat home/user/data/../../buddy/././info
+ls -l home/user/data/../../buddy/./.
+cd home/user/data/../../buddy/././.
+cat ./info
+cd ../user/./data/.
+ls
+cd ../../..
+head -n 1 ///home//buddy/info
+cat ./././././././readme.md       # сколько угодно «.»
+cd home/lina/docs/../../../../../../..   # выше корня нельзя, остаёмся в /
+ls home/../../../home/./././lina
+cat home/nope/../buddy/info       # ошибка: каталога nope нет
+cd readme.md/..           # ошибка: readme.md не каталог
+ls etc/hosts/.            # ошибка: hosts не каталог
+
+# --- cat ---
+cat readme.md
+cat etc/hosts /etc/config/app.conf   # несколько файлов
+cat /home                 # ошибка: это каталог
+cat nope.txt              # ошибка: нет такого файла
+cat                       # ошибка: не указан файл
+
+# --- head ---
+head var/log/system.log   # по умолчанию 10 строк
+head -n 3 var/log/system.log
+head -2 readme.md etc/hosts           # несколько файлов
+head -n0 readme.md        # ноль строк
+head -n                   # ошибка: нет числа
+head -n abc readme.md     # ошибка: не число
+head -x readme.md         # ошибка: неизвестный параметр
+head /etc                 # ошибка: это каталог
+
+# --- uname ---
+uname
+uname -a
+uname -n -r
+uname -sm
+uname -z                  # ошибка: неизвестный параметр
+uname lishniy             # ошибка: лишний аргумент
+
+exit
